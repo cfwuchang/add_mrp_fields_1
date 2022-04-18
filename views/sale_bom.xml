@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- add button in SaleOrder -->
+    <record id="mrp_production_form_view_inheritd" model="ir.ui.view">
+        <field name="name">mrp.production.form</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref ="mrp.mrp_production_form_view"/>	
+        <field name="arch" type="xml">
+            <xpath expr ="//button[@name='action_show_details']" position="before">
+                <field name="x_category"/>
+                <field name="x_material"/>
+                <field name="x_date"/>
+                <field name="x_remark"/>
+            </xpath>
+        </field>   
+    </record>
+
+</odoo>
